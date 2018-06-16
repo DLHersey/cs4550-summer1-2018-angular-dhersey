@@ -6,7 +6,7 @@ import { HelloWorldComponent } from './hello-world/hello-world.component';
 import {FormsModule} from "@angular/forms";
 import {CourseGridComponent} from "./course-grid/course-grid.component";
 import {WhiteBoardComponent} from "./white-board/white-board.component";
-import {RouterModule} from "@angular/router";
+import {CourseServiceClient} from "./services/course.service.client";
 
 @NgModule({
   declarations: [
@@ -17,10 +17,11 @@ import {RouterModule} from "@angular/router";
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    RouterModule
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    CourseServiceClient
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
