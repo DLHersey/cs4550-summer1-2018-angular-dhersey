@@ -12,6 +12,13 @@ import {LoginComponent} from "./login/login.component";
 import {RegisterComponent} from "./register/register.component";
 import {ProfileComponent} from "./profile/profile.component";
 import {UserServiceClient} from "./services/user.service.client";
+import {CourseViewerComponent} from "./course-viewer/course-viewer.component";
+import {ModuleListComponent} from "./module-list/module-list.component";
+import {LessonTabsComponent} from "./lesson-tabs/lesson-tabs.component";
+import {WidgetListComponent} from "./widget-list/widget-list.component";
+import {ModuleServiceClient} from "./services/module.service.client";
+import {WidgetServiceClient} from "./services/widget.service.client";
+import {LessonServiceClient} from "./services/lesson.service.client";
 
 @NgModule({
   declarations: [
@@ -21,7 +28,11 @@ import {UserServiceClient} from "./services/user.service.client";
     WhiteBoardComponent,
     LoginComponent,
     RegisterComponent,
-    ProfileComponent
+    ProfileComponent,
+    CourseViewerComponent,
+    ModuleListComponent,
+    LessonTabsComponent,
+    WidgetListComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +41,10 @@ import {UserServiceClient} from "./services/user.service.client";
   ],
   providers: [
     CourseServiceClient,
-    UserServiceClient
+    UserServiceClient,
+    ModuleServiceClient,
+    WidgetServiceClient,
+    LessonServiceClient
   ],
   bootstrap: [AppComponent]
 })
